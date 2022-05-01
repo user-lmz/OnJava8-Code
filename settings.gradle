@@ -1,0 +1,8 @@
+rootProject.name = 'OnJava8-Code'
+include 'interfaces'
+include 'polymorphism'
+include 'collections'
+include 'onjava'
+include 'reflection'
+include 'interface'
+
