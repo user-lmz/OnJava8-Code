@@ -7,4 +7,5 @@ include 'reflection'
 include 'interface'
 include 'functional'
 include 'exceptions'
+include 'operators'
 
