@@ -1,7 +1,6 @@
 /build/
 /exceptions/build/
 /functional/build/
-/interface/build/
 /interfaces/build/
 /onjava/build/
 /operators/build/
@@ -9,3 +8,4 @@
 /reflection/build/
 /src/
 /streams/build/
+/interface/build/
