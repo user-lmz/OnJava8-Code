@@ -8,4 +8,5 @@ include 'interface'
 include 'functional'
 include 'exceptions'
 include 'operators'
+include 'streams'
 

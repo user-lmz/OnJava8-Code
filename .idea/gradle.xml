@@ -21,6 +21,7 @@
             <option value="$PROJECT_DIR$/operators" />
             <option value="$PROJECT_DIR$/polymorphism" />
             <option value="$PROJECT_DIR$/reflection" />
+            <option value="$PROJECT_DIR$/streams" />
           </set>
         </option>
       </GradleProjectSettings>
