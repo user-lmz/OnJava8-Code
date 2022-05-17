@@ -12,17 +12,25 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation project(':onjava')
 }
 
 test {
     useJUnitPlatform()
 }
 
-compileJava {
-    options.compilerArgs += ['--enable-preview']
-    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+def enablePreview = '--enable-preview'
+
+// 编译
+tasks.withType(JavaCompile).all {
+    options.compilerArgs += [enablePreview]
 }
 
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+// 执行
+tasks.withType(JavaExec) {
+    jvmArgs += enablePreview
+}
+
+//sourceCompatibility = JavaVersion.VERSION_16
+//targetCompatibility = JavaVersion.VERSION_16
 

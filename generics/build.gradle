@@ -19,3 +19,16 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+def enablePreview = '--enable-preview'
+
+// 编译
+tasks.withType(JavaCompile).all {
+    options.compilerArgs += [enablePreview]
+    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:preview"
+}
+
+// 执行
+tasks.withType(JavaExec) {
+    jvmArgs += enablePreview
+}
