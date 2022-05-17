@@ -9,4 +9,5 @@ include 'functional'
 include 'exceptions'
 include 'operators'
 include 'streams'
+include 'generics'
 
