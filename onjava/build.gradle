@@ -17,3 +17,17 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+def enablePreview = '--enable-preview'
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs.add(enablePreview)
+}
+
+tasks.withType(JavaExec) {
+    jvmArgs(enablePreview)
+}
+
+tasks.withType(JavaDebugOptions) {
+    jvmArgs(enablePreview)
+}

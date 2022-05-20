@@ -1,7 +1,9 @@
-package generics;// generics/WatercolorSets.java
+// generics/WatercolorSets.java
 // (c)2021 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+
+import watercolors.Watercolors;
 
 import java.util.EnumSet;
 import java.util.Set;
@@ -11,15 +13,15 @@ import static watercolors.Watercolors.*;
 
 public class WatercolorSets {
   public static void main(String[] args) {
-    Set<watercolors.Watercolors> set1 =
+    Set<Watercolors> set1 =
       EnumSet.range(BRILLIANT_RED, VIRIDIAN_HUE);
-    Set<watercolors.Watercolors> set2 =
+    Set<Watercolors> set2 =
       EnumSet.range(CERULEAN_BLUE_HUE, BURNT_UMBER);
     System.out.println("set1: " + set1);
     System.out.println("set2: " + set2);
     System.out.println(
       "union(set1, set2): " + union(set1, set2));
-    Set<watercolors.Watercolors> subset = intersection(set1, set2);
+    Set<Watercolors> subset = intersection(set1, set2);
     System.out.println(
       "intersection(set1, set2): " + subset);
     System.out.println("difference(set1, subset): " +

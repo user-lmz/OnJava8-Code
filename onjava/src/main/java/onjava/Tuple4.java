@@ -14,4 +14,5 @@ public class Tuple4<A, B, C, D>
   @Override public String rep() {
     return super.rep() + ", " + a4;
   }
+
 }

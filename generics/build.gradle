@@ -32,3 +32,8 @@ tasks.withType(JavaCompile).all {
 tasks.withType(JavaExec) {
     jvmArgs += enablePreview
 }
+
+//调试
+tasks.withType(JavaDebugOptions) {
+    jvmArgs += enablePreview
+}

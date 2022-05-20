@@ -8,7 +8,7 @@ public class GenericVarargs {
   @SafeVarargs
   public static <T> List<T> makeList(T... args) {
     List<T> result = new ArrayList<>();
-    for(T item : args)
+    for (T item : args)
       result.add(item);
     return result;
   }

@@ -20,18 +20,23 @@ test {
     useJUnitPlatform()
 }
 
+def enablePreview = '--enable-preview'
+
 //编译
 tasks.withType(JavaCompile).all {
-    options.compilerArgs += '--enable-preview'
-    options.compilerArgs += "-Xlint:unchecked"
+    options.compilerArgs += [enablePreview]
+    options.compilerArgs << "-Xlint:preview"
 }
 
 //执行
 tasks.withType(JavaExec) {
-    jvmArgs += '--enable-preview'
+    jvmArgs += enablePreview
 }
 
 //调试
 tasks.withType(JavaDebugOptions) {
-    jvmArgs += '--enable-preview'
+    jvmArgs += enablePreview
 }
+
+//sourceCompatibility = JavaVersion.VERSION_16
+//targetCompatibility = JavaVersion.VERSION_16
